@@ -23,5 +23,5 @@ public class Customer {
 
     private String remark;
 
-    private Date addtime;
+    private String addtime;
 }

@@ -15,7 +15,7 @@
   <sql id="Base_Column_List" >
     id, comname, companyperson, comaddress, comphone, camera, present, remark, addtime
   </sql>
-  <select id="showAllCustomer" resultMap="BaseResultMap">
+  <select id="showAllCustomer" resultMap="BaseResultMap" parameterType="com.ujiuye.cus.bean.Customer">
     select *
     from customer
   </select>
@@ -32,11 +32,11 @@
   <insert id="insert" parameterType="com.ujiuye.cus.bean.Customer" >
     insert into customer (id, comname, companyperson, 
       comaddress, comphone, camera, 
-      present, remark, addtime
+      present, remark
       )
     values (#{id,jdbcType=INTEGER}, #{comname,jdbcType=VARCHAR}, #{companyperson,jdbcType=VARCHAR}, 
       #{comaddress,jdbcType=VARCHAR}, #{comphone,jdbcType=VARCHAR}, #{camera,jdbcType=VARCHAR}, 
-      #{present,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{addtime,jdbcType=DATE}
+      #{present,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.ujiuye.cus.bean.Customer" >

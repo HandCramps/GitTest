@@ -13,14 +13,14 @@ import java.util.List;
 @RequestMapping("/cus")
 public class CusController {
 
-    @Autowired
-    CustomerService customerService;
-
-    @RequestMapping("/showAllCustomer")
-    @ResponseBody
-    public List<Customer> showAll(String key){
-        System.out.println(key);
-        List<Customer> list = customerService.showAllCustomer();
-        return list;
-    }
+//    @Autowired
+//    CustomerService customerService;
+//
+//    @RequestMapping("/showAllCustomer")
+//    @ResponseBody
+//    public List<Customer> showAll(String key){
+//        System.out.println(key);
+//        List<Customer> list = customerService.showAllCustomer();
+//        return list;
+//    }
 }
